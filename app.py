@@ -11,7 +11,7 @@ workbook_alunos = openpyxl.load_workbook('planilha_alunos.xlsx')
 sheet_alunos = workbook_alunos['Sheet1']
 
 # Pega os dados na planilha
-for indice, linha in enumerate(sheet_alunos.iter_rows(min_row=2)):
+for indice, linha in enumerate(sheet_alunos.iter_rows(min_row=2)): # Caso queira fazer um teste rápido você pode inserir 'max_row=2' para limitar a impressão a somente um certificado
     # Acessar cada célula
     nome_do_participante = linha[1].value # Nome do participante
     nome_do_curso = linha[0].value # Nome do curso
